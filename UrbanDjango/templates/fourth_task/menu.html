@@ -1,0 +1,15 @@
+{% block pagename %} <h1>{{text}}</h1> {% endblock %}
+
+{% block menu %}
+<p><a href="/platform/">Главная</a></p>
+<p><a href="/games/">Магазин</a></p>
+<p><a href="/cart/">Корзина</a></p>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for game in games %}
+        <li>{{ game }} <button>Купить</button></li>
+        {% endfor %}
+</ul>
+{% endblock %}
