@@ -16,17 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-#from task2.views import ClassTemplate, func
-from task4.views import platform, shop, cart
+from task5.views import sing_app_by_django, sign_up_by_html
 from django.views.generic import TemplateView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', ClassTemplate.as_view()),
+    path('', sign_up_by_html),
+    path('django_sign_up', sing_app_by_django),
     #path('func/', func),
-    path('platform/', platform),
-    path('games/', shop),
-    path('cart/', cart)
+    # path('platform/', platform),
+    # path('games/', shop),
+    # path('cart/', cart),
 
 ]
